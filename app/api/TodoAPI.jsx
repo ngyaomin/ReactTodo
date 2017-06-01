@@ -29,7 +29,8 @@ module.exports = {
 
     filteredTodos = filteredTodos.filter((todo) => {
       var text = todo.text.toLowerCase();
-      return searchText.length === 0 || text.indexOf(searchText) > -1;
+      return searchText.length === 0 || text.indexOf(searchText) > -1; // we are returning if found, -1 is not found
+      // so > -1 would return the found.
     });
 
     filteredTodos.sort((a, b) => {
