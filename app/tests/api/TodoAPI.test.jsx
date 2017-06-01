@@ -64,7 +64,7 @@ describe('TodoAPI', () => {
       completed: false
     }, {
       id: 3,
-      text: 'Another Text',
+      text: 'Some Text',
       completed: true
     }];
 
@@ -82,6 +82,26 @@ describe('TodoAPI', () => {
 
     });
 
+    it('should sort by completed status', () => {
+      var filteredTodos = TodoAPI.filterTodos(todos, true, '');
+
+      expect(filteredTodos[0].completed).toBe(false);
+    });
+
+
+    it('should filter todos by searchText', () => {
+      var filteredTodos = TodoAPI.filterTodos(todos, true, 'some');
+
+      expect(filteredTodos.length).toBe(2);
+
+    });
+
+      it('should return all todos by searchText', () => {
+        var filteredTodos = TodoAPI.filterTodos(todos, true, '');
+
+        expect(filteredTodos.length).toBe(3);
+
+      });
 
   });
 });
