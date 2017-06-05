@@ -5,15 +5,15 @@ export var setSearchText = (searchText) => {
   };
 };
 
-export var showCompleted = () => {
+export var toggleShowCompleted = () => {
   return {
-    type: 'TOGGLE_SHOW_COMPLETED',
-  }
+    type: 'TOGGLE_SHOW_COMPLETED'
+  };
 };
 
 export var addTodo = (text) => {
   return {
-    type: 'Add_TODO',
+    type: 'ADD_TODO',
     text
   };
 };
