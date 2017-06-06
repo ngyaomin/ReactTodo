@@ -12,21 +12,21 @@ describe('Actions', () => {
     expect(res).toEqual(action);
   });
 
-  it('should generate add todo action', () => {
-    var action = {
-      type: 'Add_TODO',
-      text: 'Something to do'
-    };
-    var res = actions.addTodo(action.text);
-
-    expect(res).toEqual(action);
-  });
-
   it('should generate show completed action', () => {
     var action = {
       type: 'TOGGLE_SHOW_COMPLETED',
     };
-    var res = actions.showCompleted();
+    var res = actions.toggleShowCompleted();
+
+    expect(res).toEqual(action);
+  });
+
+  it('should generate add todo action', () => {
+    var action = {
+      type: 'ADD_TODO',
+      text: 'Something to do'
+    };
+    var res = actions.addTodo(action.text);
 
     expect(res).toEqual(action);
   });
