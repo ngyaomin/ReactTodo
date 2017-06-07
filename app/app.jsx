@@ -12,10 +12,6 @@ store.subscribe(() => {
   console.log('New State', store.getState());
 });
 
-store.dispatch(actions.addTodo('Meditate the mind'));
-store.dispatch(actions.setSearchText('mind'));
-store.dispatch(actions.toggleShowCompleted());
-
 // load foundation
 $(document).foundation();
 
